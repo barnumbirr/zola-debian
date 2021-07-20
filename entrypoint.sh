@@ -12,11 +12,10 @@ export DEBIAN_FRONTEND DEB_BUILD_OPTIONS
 
 dependencies() {
     apt update && apt install -y devscripts equivs git
-    if [ "$OS_VERSION" = 10 ]; then
-        apt install -y curl
-        curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
-        . ~/.cargo/env
-    fi
+    # slotmap crate requires rustc 1.49.0+
+    apt install -y curl
+    curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
+    . ~/.cargo/env
 }
 
 get_sources() {
