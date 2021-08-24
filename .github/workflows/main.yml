@@ -7,6 +7,7 @@ on:
 
 env:
   DEBIAN_STABLE: bullseye
+  PKG_NAME: zola
 
 jobs:
   build:
@@ -20,16 +21,16 @@ jobs:
           set -xe
           mkdir -p assets
           ./build.sh -i debian:${{ env.DEBIAN_STABLE }}-slim
-          rename.ul .deb _${{ env.DEBIAN_STABLE }}.deb target/zola_*.deb
-          mv -n target/zola_*.deb assets/
+          rename.ul .deb _${{ env.DEBIAN_STABLE }}.deb target/${{ env.PKG_NAME }}_*.deb
+          mv -n target/${{ env.PKG_NAME }}_*.deb assets/
 
           ./build.sh -i debian:testing-slim
-          rename.ul .deb _testing.deb target/zola_*.deb
-          mv -n target/zola_*.deb assets/
+          rename.ul .deb _testing.deb target/${{ env.PKG_NAME }}_*.deb
+          mv -n target/${{ env.PKG_NAME }}_*.deb assets/
 
           ./build.sh -i debian:unstable-slim
-          rename.ul .deb _unstable.deb target/zola_*.deb
-          mv -n target/zola_*.deb assets/
+          rename.ul .deb _unstable.deb target/${{ env.PKG_NAME }}_*.deb
+          mv -n target/${{ env.PKG_NAME }}_*.deb assets/
 
       - name: Build packages
         uses: "marvinpinto/action-automatic-releases@v1.2.1"
