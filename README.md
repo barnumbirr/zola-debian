@@ -9,12 +9,12 @@ If you have [Docker](https://www.docker.com/) installed locally, just run the fo
 ```bash
 user@hostname$ ./build.sh
 ```
-By default this will build zola 0.14.1 on Debian Bullseye.
+By default this will build zola 0.15.0 on Debian Bullseye.
 
 If you want to customize the build at runtime, use the following:
 
 ```bash
-user@hostname$ ./build.sh -i debian:unstable-slim -v 0.13.0
+user@hostname$ ./build.sh -i debian:unstable-slim -v 0.14.1
 ```
 Don't forget to update `debian/changelog` so your package is generated with the correct version.
 
