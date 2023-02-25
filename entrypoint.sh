@@ -28,7 +28,6 @@ build() {
     cp -a "$TARGET/debian" .
     yes | mk-build-deps --install
     dpkg-source --before-build .
-    debian/rules build
     debian/rules binary
 }
 

@@ -9,9 +9,14 @@ override_dh_auto_clean:
 override_dh_auto_build:
 	cargo build --release
 
+execute_after_dh_auto_build:
+	mkdir completions
+	target/release/zola completion bash > completions/zola.bash
+	target/release/zola completion fish > completions/zola.fish
+	target/release/zola completion zsh > completions/_zola
+
 override_dh_auto_install:
 	install -Dm04755 "target/release/zola" "debian/zola/usr/bin/zola"
-	strip "debian/zola/usr/bin/zola"
 	install -Dm0644 "completions/zola.bash" "debian/zola/usr/share/bash-completion/completions/zola"
 	install -Dm0644 "completions/zola.fish" "debian/zola/usr/share/fish/completions/zola.fish"
 	install -Dm0644 "completions/_zola" "debian/zola/usr/share/vendor-completions/_zola"
