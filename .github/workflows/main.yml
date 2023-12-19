@@ -6,7 +6,7 @@ on:
     - '*'
 
 env:
-  DEBIAN_STABLE: bullseye
+  DEBIAN_STABLE: bookworm
   PKG_NAME: zola
 
 jobs:

@@ -2,7 +2,7 @@
 
 set -eu
 
-IMAGE="debian:bullseye-slim"
+IMAGE="debian:bookworm-slim"
 TARGET="$(dirname "$0" | xargs realpath)"
 VERSION="v0.18.0"
 
