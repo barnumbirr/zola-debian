@@ -1,7 +1,7 @@
 Source: zola
 Section: web
 Priority: optional
-Maintainer: Martin Simon <me@martinsimon.me>
+Maintainer: Martin Simon <martin@simon.tf>
 Build-Depends:
  cargo:native,
  debhelper (>= 12),
