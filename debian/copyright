@@ -3,7 +3,7 @@ Upstream-Name: zola
 Source: https://github.com/getzola/zola
 
 Files: *
-Copyright: 2017-2023 Vincent Prouillet
+Copyright: 2017-2024 Vincent Prouillet
 License: MIT License
 
 Files: debian/*
@@ -11,7 +11,7 @@ Copyright: 2021-2024 Martin Simon <martin@simon.tf>
 License: Apache-2.0
 
 License: MIT License
- Copyright (c) 2017-2023 Vincent Prouillet
+ Copyright (c) 2017-2024 Vincent Prouillet
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
  of this software and associated documentation files (the "Software"), to deal
