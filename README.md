@@ -9,12 +9,12 @@ If you have [Docker](https://www.docker.com/) installed locally, just run the fo
 ```bash
 user@hostname$ ./build.sh
 ```
-By default this will build zola 0.20.0 on Debian Bookworm.
+By default this will build zola 0.21.0 on Debian Bookworm.
 
 If you want to customize the build at runtime, use the following:
 
 ```bash
-user@hostname$ ./build.sh -i debian:unstable-slim -v 0.14.1
+user@hostname$ ./build.sh -i debian:unstable-slim -v 0.19.2
 ```
 Don't forget to update `debian/changelog` so your package is generated with the correct version.
 
@@ -28,7 +28,7 @@ To publish a new package version to Github, follow these steps:
 ## License
 
 ```
-Copyright (c) 2021-2024 Martin Simon
+Copyright (c) 2021-2025 Martin Simon
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

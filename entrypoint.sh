@@ -12,7 +12,6 @@ export DEBIAN_FRONTEND DEB_BUILD_OPTIONS
 
 dependencies() {
     apt update && apt install -y devscripts equivs git
-    # `deranged` requires rustc 1.67.0+, `bitstream-io v2.4.1` requires rustc 1.79.0+
     apt install -y curl
     curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
     . ~/.cargo/env
