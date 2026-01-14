@@ -2,7 +2,7 @@
 
 set -eu
 
-IMAGE="debian:bookworm-slim"
+IMAGE="debian:trixie-slim"
 TARGET="$(dirname "$0" | xargs realpath)"
 VERSION="v0.22.0"
 

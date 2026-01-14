@@ -1,3 +1,9 @@
+zola (0.22.0-2) unstable; urgency=medium
+
+  * Bookworm is now stable
+
+ -- Martin Simon <martin@simon.tf>  Wed, 14 Jan 2026 00:00:00 +0000
+
 zola (0.22.0-1) unstable; urgency=medium
 
   * New upstream release
